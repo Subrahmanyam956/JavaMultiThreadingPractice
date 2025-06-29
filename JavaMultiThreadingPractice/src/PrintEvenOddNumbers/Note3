@@ -1,0 +1,18 @@
+Question:
+
+        Take Two threads and an input value n. Now from 1 to n...print all the even number by
+one thread and all the odd numbers by another thread.
+
+
+Answer :
+    To answer this question we are using the concepts of wait() and notify() methods
+    along with synchronized keyword.
+
+    we are using the wait() and notify() depending on the current value of the curVal.
+
+    Now we are also using synchronized keyword at method level because at any point of time in the code,
+    we only want one thread to be available running the method of the code. we do not want
+    other thread to be in the same section of the code at a time.
+
+    If we use synchronized there will always be only one thread at the section of the code and we
+    can make them run one after the other based on the wait() and notify() methods usage.
