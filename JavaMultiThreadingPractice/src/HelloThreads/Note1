@@ -1,0 +1,38 @@
+There are two ways to implement a thread and run them.
+
+1. Extending Thread class
+2. Implementing Runnable interface
+
+
+1. Extending Thread Class => Drawback -> inheritance => cannot extend other classes in Java
+
+    -> Then we override the run() method of the thread class so that we give our own definition of the
+    run method and what our thread should do
+
+    -> Even if we do not override the run method also our class compiles and runs...but in our class
+    we call the start() method. The start method internally calls the run() method which is an empty method
+    by default. Which means we created a thread but were unable to do any specific action by running our thread.
+
+    -> Hence we always override the run() method and give our definition of run() method and do our own spacific
+    task.
+
+2. Implementing runnable interface  => advantage -> can implement more other interfaces and extend another
+                                        super class (Always recommended)
+
+    -> implementing runnable interface enforces us to override the run() method and give our own definition
+    for the thread to run.
+
+    -> Here we can use the concepts of Lambda expressions and the concept of Method References as well.
+
+    as given in the example
+
+
+-> Here in this example we have shown the different implementations of threads.
+    1. extends Thread      => then overriding run() method
+    2. implements Runnable   => Overriding Thread
+    3. Giving a Lambda Expression resembling a thread run
+    4. Giving a method reference and then run in place of a run method using method reference for a thread.
+    5. Using .join() method.
+        Since our main method is also a thread. Our usage of join() method prevents the main method
+        from exiting out of execution. It waits until the join methods of the other mentioned threads are
+        returned.

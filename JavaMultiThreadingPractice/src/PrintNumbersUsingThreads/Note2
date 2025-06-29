@@ -1,0 +1,12 @@
+In this example we are simply printing the numbers with threads.
+
+Here we also showed the usage of sleep method.
+Sleep method causing the app to catch the exception Interrupted Exception and give our own definition
+for it.
+
+Thread Intercommunication methods are -> sleep(), wait() and join()
+
+By using these methods the threads on our objects communicate with each other.
+
+we see their implementation on our usages.
+
