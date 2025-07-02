@@ -1,0 +1,13 @@
+This is a simple example to show how deadlock happens.
+
+Here in this example we have created two threads, t1 and t2.
+
+We have two objects and we would explain deadlocks using synchronized lock on two different objects
+(/ resources) lockObjectA and lockObjectB.
+
+Now thread t1 -> starts execution, then get synchronized over lockObjectA. And sleeps for 500ms.
+
+Now thread t2 -> starts execution, then get synchronized over lockObjectB. And sleeps for 500ms.
+
+Now t1 aftwe waking up tries to use lockObjectB and waits to get from thread t2 but t2 is currently using it
+and still not letting it go.
