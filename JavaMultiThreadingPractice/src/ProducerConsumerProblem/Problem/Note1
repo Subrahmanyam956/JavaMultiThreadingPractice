@@ -1,0 +1,12 @@
+This is a simple producer consumer problem.
+Here the producer and the consumer are in a deadlock state.
+
+We heve two locks and
+producer acquired a lock(LockA) and waiting for another lock(LockB)
+Consumer acquired a lock(LockB) and waiting for another lock(LockA).
+
+
+
+Here we also implemented the brokerbuffer implementation
+where producer and the consumer are in sync with each other using wait and notify and
+there is no deadlock between them.
